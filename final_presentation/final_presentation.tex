@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
-\title{Sprint 1}
+\title{Final Delivery Presentation}
 
 \subtitle{IO and Algorithm}
 
@@ -31,24 +31,57 @@
     \end{itemize}
 \end{frame}
 
-\section{Methodology}
-	\begin{frame}{Methodology}
-	What were our methods?     
-	\begin{itemize}
-		\item SCRUM
-		\item Sprint reviews
-	\end{itemize}
-\end{frame}
-
 \section{Goals}
 \begin{frame}{Goals}
     Our goals for Asteria      
-    \begin{itemize}
-        \item Refactoring SIGPROC library
+	\begin{itemize}
+		\item Refactoring SIGPROC library
+		\item Open Source and well documented for the world to use
+		\begin{itemize}
+			\item GNU Lesser General Public License v3.0
+		\end{itemize}
+		\item Ability to be maintained and improved by future students
         \item Python/C++
-        \item Tests minimal 60\% code coverage
+        \begin{itemize}
+			\item Python for the initial software.
+			\item C++ Later for possible improved performance and/or GPU Support
+		\end{itemize}
+        \item Tests require a mimimum of 60\% of code coverage
     \end{itemize}
 \end{frame}
+
+\section{Methodology}
+	\begin{frame}{Methodology}
+	How we ensured proper team-work processes
+	\begin{itemize}
+		\item Agile Development (SCRUM)
+		\item Sprint plannings, reviews and retrospectives
+		\item Issue tracking by Trello
+		\item Pull requests and mergers
+	\end{itemize}
+\end{frame}
+
+\section{Quality Assurance and CI/CD}
+\begin{frame}{Quality Assurance and (CI)/CD}
+    Quality Assurance and Automated building    
+	\begin{itemize}
+		\item Ran by Travis
+		\item Linting PyLint to ensure coding standards
+		\item PyTest to maintain greater than 60 percent code coverage
+		\item 90 Percent code coverage reached
+		\item Manual QA using Pull requests
+    \end{itemize}
+\end{frame}
+
+\section{Module based design}
+\begin{frame}{Module based Design}
+	\begin{itemize}
+		\item Based on a lot of Python libraries such as matplotlib. 
+		\item Ensures that each seperate module can be used seperatly in different types of Python software. 
+		\item For example: The filterbank module can be used seperatly from the timeseries module. 
+	\end{itemize}
+\end{frame}
+
 
 \section{Modules}
 \begin{frame}{Modules}
@@ -67,8 +100,13 @@
 \section{Filterbank}
 \begin{frame}{Filterbank}
 	\begin{itemize}
-		\item Read filterbank files
 		\item Generate mock data
+		\begin{itemize}
+			\item Generate header
+			\item Generate signal which does include a Pulsar
+			\item Exports to filterbank file
+		\end{itemize}
+		\item Read filterbank files into special Filterbank object
 	\end{itemize}
 \end{frame}
 
@@ -94,7 +132,10 @@
 \section{Timeseries}
 \begin{frame}{Timeseries}
 	\begin{itemize}
-		\item Downsampling
+		\item Object is able to be initialized from 1D Array
+		\item Object is able to be initialized from Filterbank
+		\item Implemented downsampling
+		\item All future timeseries operations shall be included here
 	\end{itemize}
 \end{frame}
 
@@ -120,6 +161,35 @@
 		\item Waterfall
 	\end{itemize}
 \end{frame}
+
+\section{Results and Benchmarks}
+\begin{frame}{Results and Benchmarks}
+	\begin{itemize}
+		\item Ran on Centos 6, 32GB RAM, Dual Xeon Quad Core (HvA Server)
+	\end{itemize}
+\end{frame}
+
+\section{Run time 3070 Samples in seconds}
+\begin{frame}{Run time 3070 Samples in seconds}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{barchart_3070}
+	\end{figure}
+\end{frame}
+
+\section{Run time 49150 Samples in seconds}
+\begin{frame}{Run time 49150 Samples in seconds}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{barchart_49150}
+	\end{figure}
+\end{frame}
+
+\section{Distribution of time 49150 Samples}
+\begin{frame}{Distribution of time 49150 Samples}
+	\begin{figure}
+		\includegraphics[width=.8\textwidth]{piechart_49150}
+	\end{figure}
+\end{frame}
+
 
 \section{End}
 \begin{frame}{Questions?}
