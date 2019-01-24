@@ -56,11 +56,11 @@
 	These modules are present and usable in the Asteria library     
 	\begin{itemize}
 		\item Filterbank
-		\item Pipeline
 		\item Clipping
 		\item Dedisperse
 		\item Timeseries
 		\item Fourier
+		\item Pipeline
 		\item Plot
 	\end{itemize}
 \end{frame}
@@ -73,14 +73,18 @@
 	\end{itemize}
 \end{frame}
 
-\section{Pipeline}
-\begin{frame}{Pipeline}
-	Pipeline
-\end{frame}
-
 \section{Clipping}
 \begin{frame}{Clipping}
-	Clipping
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			Filter samples with noise
+			\includegraphics[width=\columnwidth]{filter_samples}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			Filter frequencies with noise
+			\includegraphics[width=\columnwidth]{filter_freqs}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \section{Dedisperse}
@@ -96,6 +100,13 @@
 \section{Fourier}
 \begin{frame}{Fourier}
 	Fourier
+\end{frame}
+
+\section{Pipeline}
+\begin{frame}{Pipeline}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{pipeline-order}
+	\end{figure}
 \end{frame}
 
 \section{Plot}
